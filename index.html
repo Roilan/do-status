@@ -3,10 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <title>DigitalOcean Client</title>
+
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
+    <header class="container">
+        <h3>
+            DigitalOcean Client
+            <small>View your droplet status</small>
+        </h3>
+    </header>
 
+    <main class="container">
+        <section class="api-form">
+            <form role="form">
+                <div class="form-group">
+                    <label for="apikey">API Key:</label>
+                    <input id="apikey" type="text" />
+                </div>
+
+                <button type="submit" class="btn btn-primary">View Droplet</button>
+            </form>
+        </section>
+
+        <section class="droplet-view">
+
+        </section>
+    </main>
 
     <script src="js/libs/reqwest.min.js"></script>
     <script src="js/apiKey.js"></script>
