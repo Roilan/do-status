@@ -1,0 +1,6 @@
+.DS_STORE
+node_modules
+.tmp
+.sass-cache
+.idea
+js/apiKey.js
