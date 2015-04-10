@@ -7,15 +7,26 @@
     var r = reqwest;
     var url = 'https://api.digitalocean.com/v2/';
 
-    function getData(action) {
+    // dom variables
+    var dropletSubmit = document.getElementById('dropletSubmit');
+    var dropletName = document.getElementById('dropletName');
+    var dropletStatus = document.getElementById('dropletStatus');
+
+    function getDropletsStatus() {
         r({
-            url: url + action,
+            url: url + 'droplets',
             method: 'get',
             headers: {
               'Authorization': 'Bearer ' + key
             },
             success: function(data) {
-                console.log(data);
+                // iterates through droplets to get
+                // name and status and push each item
+                // into the dom
+                data.droplets.forEach(function(droplet) {
+                    dropletName.innerHTML = droplet.name;
+                    dropletStatus.innerHTML = droplet.status;
+                });
             },
             error: function(error) {
                 console.log(error);
@@ -23,5 +34,11 @@
         })
     }
 
-    getData('droplets');
+    dropletSubmit.addEventListener('click', function(e) {
+        // prevent page refreshing
+        e.preventDefault();
+
+        // get droplets status
+        getDropletsStatus();
+    });
 })();
