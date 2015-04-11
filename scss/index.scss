@@ -2,6 +2,5 @@
 @import 'libs/neat/neat';
 //@import 'libs/bitters/base';
 
-body {
-  @include padding(20px);
-}
+@import 'variables';
+@import 'base';
