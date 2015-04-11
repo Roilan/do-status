@@ -1,6 +1,11 @@
+@import 'libs/normalize';
+
 @import 'libs/bourbon/bourbon';
 @import 'libs/neat/neat';
 //@import 'libs/bitters/base';
 
 @import 'variables';
 @import 'base';
+
+@import 'modules/dashboard/header';
+@import 'modules/dashboard/main';

@@ -1,0 +1,21 @@
+main {
+  @include outer-container();
+
+  .dashboard-headline {
+
+    p {
+      img {
+        position: relative;
+        top: 7px;
+      }
+
+      .dashboard-title {
+        color: $darkBlue;
+        font-size: 1.3em;
+      }
+
+    } // p
+
+  } // dashboard-headline
+
+} // main

@@ -4,37 +4,51 @@
     <meta charset="UTF-8">
     <title>DigitalOcean Client</title>
 
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css"/>
     <link rel="stylesheet" href="css/index.css"/>
 </head>
 <body>
-    <header class="container">
-        <h3>
-            DigitalOcean Client
-            <small>View your droplet status</small>
-        </h3>
+    <header>
+        <div class="description">
+            <h4>DigitalOcean Status</h4>
+        </div>
+
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Dashboard</a></li>
+                <li><a href="#">Droplets</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main class="container">
-        <section class="api-form">
-            <form role="form">
-                <div class="form-group">
-                    <label for="apikey">API Key:</label>
-                    <input id="apikey" type="text" />
-                </div>
+    <!--<main class="container">-->
+        <!--<section class="api-form">-->
+            <!--<form role="form">-->
+                <!--<div class="form-group">-->
+                    <!--<label for="apikey">API Key:</label>-->
+                    <!--<input id="apikey" type="text" />-->
+                <!--</div>-->
 
-                <button id="dropletSubmit" type="submit" class="btn btn-primary">View Droplet</button>
-            </form>
-        </section>
+                <!--<button id="dropletSubmit" type="submit" class="btn btn-primary">View Droplet</button>-->
+            <!--</form>-->
+        <!--</section>-->
 
-        <section class="droplet-view">
-            <h3>Your Droplets:</h3>
+        <!--<section class="droplet-view">-->
+            <!--<h3>Your Droplets:</h3>-->
 
-            <div class="droplets">
-                <p>Name: <span id="dropletName"></span></p>
-                <p>Status: <span id="dropletStatus"></span></p>
-            </div>
-        </section>
+            <!--<div class="droplets">-->
+                <!--<p>Name: <span id="dropletName"></span></p>-->
+                <!--<p>Status: <span id="dropletStatus"></span></p>-->
+            <!--</div>-->
+        <!--</section>-->
+    <!--</main>-->
+
+    <main>
+        <header class="dashboard-headline">
+            <p>
+                <img src="img/home-icon.png" alt="#"/>
+                <span class="dashboard-title">Dashboard</span>
+            </p>
+        </header>
     </main>
 
     <script src="js/libs/reqwest.min.js"></script>
