@@ -6,9 +6,6 @@
   .description {
     @include span-columns(6);
 
-    h4 {
-      font-weight: $normal;
-    }
   } // description
 
   .navbar {
@@ -25,7 +22,7 @@
           color: black;
 
           &:hover {
-            color: $darkBlue;
+            color: $dark-blue;
           }
         } // a
 
