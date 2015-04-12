@@ -10,12 +10,39 @@ main {
       }
 
       .dashboard-title {
-        color: $darkBlue;
+        color: $dark-blue;
         font-size: 1.3em;
       }
 
     } // p
 
   } // dashboard-headline
+
+  .dashboard-content {
+    @include outer-container();
+
+    .quick-view {
+      @include content-border();
+      @include content-padding();
+      @include span-columns(6);
+
+      form {
+        text-align: center
+      }
+
+      div {
+        margin-top: 20px;
+      }
+
+    } // quick-view
+
+    .quick-view-droplet {
+      @include content-border();
+      @include content-padding();
+      @include span-columns(6);
+
+    } // quick-view-droplet
+
+  } // dashboard-content
 
 } // main
