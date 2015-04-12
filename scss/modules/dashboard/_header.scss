@@ -1,8 +1,7 @@
-header {
+.navbar-container {
   @include outer-container();
   border-radius: 15px;
   height: 50px;
-  padding: 0 35px;
 
   .description {
     @include span-columns(6);
