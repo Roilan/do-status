@@ -1,6 +1,7 @@
 (function() {
     // key temporarily pulls from apiKey.js
     // will eventually equal to user unique API key
+    var apiKey = document.getElementById('apiKey');
     var key = apiKey;
 
     // reqwest variables
@@ -9,6 +10,7 @@
 
     // dom variables
     var dropletSubmit = document.getElementById('dropletSubmit');
+    var apiKeyStatus = document.getElementById('apiKeyStatus');
 
     var dropletId = document.getElementById('dropletId');
     var dropletName = document.getElementById('dropletName');
@@ -21,12 +23,14 @@
             url: url + 'droplets',
             method: 'get',
             headers: {
-              'Authorization': 'Bearer ' + key
+              'Authorization': 'Bearer ' + key.value
             },
             success: function(data) {
                 // iterates through droplets to get
                 // name and status and push each item
                 // into the dom
+                apiKeyStatus.innerHTML = 'Success!';
+
                 data.droplets.forEach(function(droplet) {
                     dropletId.innerHTML = droplet.id;
                     dropletName.innerHTML = droplet.name;
@@ -37,7 +41,7 @@
                 });
             },
             error: function(error) {
-                console.log(error);
+                apiKeyStatus.innerHTML = error.statusText + ', incorrect API key.';
             }
         });
     }

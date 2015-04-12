@@ -273,6 +273,9 @@ main {
         text-align: center; }
       main .dashboard-content .quick-view div {
         margin-top: 20px; }
+        main .dashboard-content .quick-view div #apiKeyStatus {
+          padding-top: 10px;
+          display: block; }
     main .dashboard-content .quick-view-droplet {
       border: 1px solid lightgrey;
       -webkit-border-radius: 5px;
