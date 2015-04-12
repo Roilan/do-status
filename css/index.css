@@ -285,3 +285,5 @@ main {
       width: 48.82117%; }
       main .dashboard-content .quick-view-droplet:last-child {
         margin-right: 0; }
+      main .dashboard-content .quick-view-droplet .droplet-info {
+        text-align: center; }

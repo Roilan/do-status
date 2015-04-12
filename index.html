@@ -20,28 +20,6 @@
         </nav>
     </header>
 
-    <!--<main class="container">-->
-        <!--<section class="api-form">-->
-            <!--<form role="form">-->
-                <!--<div class="form-group">-->
-                    <!--<label for="apikey">API Key:</label>-->
-                    <!--<input id="apikey" type="text" />-->
-                <!--</div>-->
-
-                <!--<button id="dropletSubmit" type="submit" class="btn btn-primary">View Droplet</button>-->
-            <!--</form>-->
-        <!--</section>-->
-
-        <!--<section class="droplet-view">-->
-            <!--<h3>Your Droplets:</h3>-->
-
-            <!--<div class="droplets">-->
-                <!--<p>Name: <span id="dropletName"></span></p>-->
-                <!--<p>Status: <span id="dropletStatus"></span></p>-->
-            <!--</div>-->
-        <!--</section>-->
-    <!--</main>-->
-
     <main>
         <header class="dashboard-headline">
             <p>
@@ -65,7 +43,15 @@
             </div>
 
             <div class="quick-view-droplet">
-                <h4>Your Droplet</h4>
+                <h4>Your latest Droplet</h4>
+
+                <div class="droplet-info">
+                    <p>ID: <span id="dropletId"></span></p>
+                    <p>Name: <span id="dropletName"></span></p>
+                    <p>Status: <span id="dropletStatus"></span></p>
+                    <p>Memory: <span id="dropletMemory"></span></p>
+                    <p>Disk: <span id="dropletDisk"></span></p>
+                </div>
             </div>
         </section>
     </main>

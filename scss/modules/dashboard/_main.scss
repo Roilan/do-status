@@ -40,6 +40,10 @@ main {
       @include content-border();
       @include content-padding();
       @include span-columns(6);
+      
+      .droplet-info {
+        text-align: center;
+      } // droplet-info
 
     } // quick-view-droplet
 
