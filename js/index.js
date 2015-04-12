@@ -18,6 +18,16 @@
     var dropletMemory = document.getElementById('dropletMemory');
     var dropletDisk = document.getElementById('dropletDisk');
 
+    function clearDropletInfo() {
+        // clears the droplet information
+        // from the dom
+        dropletId.innerHTML = '';
+        dropletName.innerHTML = '';
+        dropletStatus.innerHTML = '';
+        dropletMemory.innerHTML = '';
+        dropletDisk.innerHTML = '';
+    }
+
     function getDropletsStatus() {
         r({
             url: url + 'droplets',
@@ -26,11 +36,15 @@
               'Authorization': 'Bearer ' + key.value
             },
             success: function(data) {
+                // update key status
+                apiKeyStatus.innerHTML = 'Success!';
+
+                // clear droplet info from dom
+                clearDropletInfo();
+
                 // iterates through droplets to get
                 // name and status and push each item
                 // into the dom
-                apiKeyStatus.innerHTML = 'Success!';
-
                 data.droplets.forEach(function(droplet) {
                     dropletId.innerHTML = droplet.id;
                     dropletName.innerHTML = droplet.name;
@@ -41,7 +55,11 @@
                 });
             },
             error: function(error) {
+                // update key status
                 apiKeyStatus.innerHTML = error.statusText + ', incorrect API key.';
+
+                // clear droplet info from dom
+                clearDropletInfo();
             }
         });
     }
