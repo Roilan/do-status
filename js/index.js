@@ -9,8 +9,12 @@
 
     // dom variables
     var dropletSubmit = document.getElementById('dropletSubmit');
+
+    var dropletId = document.getElementById('dropletId');
     var dropletName = document.getElementById('dropletName');
     var dropletStatus = document.getElementById('dropletStatus');
+    var dropletMemory = document.getElementById('dropletMemory');
+    var dropletDisk = document.getElementById('dropletDisk');
 
     function getDropletsStatus() {
         r({
@@ -24,14 +28,18 @@
                 // name and status and push each item
                 // into the dom
                 data.droplets.forEach(function(droplet) {
+                    dropletId.innerHTML = droplet.id;
                     dropletName.innerHTML = droplet.name;
                     dropletStatus.innerHTML = droplet.status;
+                    dropletMemory.innerHTML = droplet.memory + 'MB';
+                    dropletDisk.innerHTML = droplet.disk + 'GB';
+                    console.log(droplet);
                 });
             },
             error: function(error) {
                 console.log(error);
             }
-        })
+        });
     }
 
     dropletSubmit.addEventListener('click', function(e) {
